@@ -1,0 +1,14 @@
+CREATE OR REPLACE FORCE VIEW came.vw_rfpar_td (codses,item,op,opcion,resultado) AS
+SELECT 
+CODSES,
+'Tiempo dedicado' AS ITEM,
+CASORPT3 as OP,
+CASE 
+WHEN CASORPT3 = '1' THEN 'Menos de 1 hora'
+WHEN CASORPT3 = '2' THEN '1 hora'
+WHEN CASORPT3 = '3' THEN '2 horas'
+WHEN CASORPT3 = '4' THEN 'Más de 2 horas'
+END AS OPCION,
+COUNT(CASORPT3) AS RESULTADO
+FROM FPARTICIPANTE
+GROUP BY CASORPT3, 'Tiempo dedicado', CODSES ORDER BY ITEM,OP;

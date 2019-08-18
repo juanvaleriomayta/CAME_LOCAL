@@ -1,0 +1,2 @@
+CREATE OR REPLACE FORCE VIEW came.vw_cbcompetencia (codcom,comabre,nomcom,nomare,abrare,codare) AS
+select competencia.codcom,COMPETENCIA.NOMCOM AS COMABRE ,COMPETENCIA.NOMCOM,AREA.NOMARE,AREA.ABRARE,AREA.CODARE from competencia inner join area on competencia.codare = area.codare;

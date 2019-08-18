@@ -1,0 +1,29 @@
+CREATE OR REPLACE FORCE VIEW came.vw_rfdp_t (codses,item,op,opcion,resultado) AS
+SELECT 
+CODSES,
+'Actualidad de los conceptos' AS ITEM,
+TEMRPT1 as OP,
+CASE 
+WHEN TEMRPT1 = '1' THEN 'Mal'
+WHEN TEMRPT1 = '2' THEN 'Regular'
+WHEN TEMRPT1 = '3' THEN 'Bien'
+WHEN TEMRPT1 = '4' THEN 'Muy bien'
+WHEN TEMRPT1 = '5' THEN 'Excelente'
+END AS OPCION,
+COUNT(TEMRPT1) AS RESULTADO
+FROM FDPROGRAMA
+GROUP BY TEMRPT1, 'Actualidad de los conceptos', CODSES UNION
+SELECT 
+CODSES,
+'Aplicabilidad de los conceptos' AS ITEM,
+TEMRPT2 as OP,
+CASE 
+WHEN TEMRPT2 = '1' THEN 'Mal'
+WHEN TEMRPT2 = '2' THEN 'Regular'
+WHEN TEMRPT2 = '3' THEN 'Bien'
+WHEN TEMRPT2 = '4' THEN 'Muy bien'
+WHEN TEMRPT2 = '5' THEN 'Excelente'
+END AS OPCION,
+COUNT(TEMRPT2) AS RESULTADO
+FROM FDPROGRAMA
+GROUP BY TEMRPT2, 'Aplicabilidad de los conceptos', CODSES ORDER BY ITEM,OP;

@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.f_imp_final_ses_seq;

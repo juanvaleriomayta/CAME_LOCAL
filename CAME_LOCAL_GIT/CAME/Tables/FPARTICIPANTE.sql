@@ -1,0 +1,23 @@
+CREATE TABLE came.fparticipante (
+  cod_fpart NUMBER(38) NOT NULL,
+  profrpt VARCHAR2(1 BYTE),
+  profsug VARCHAR2(500 BYTE),
+  temrpt VARCHAR2(1 BYTE),
+  temsug VARCHAR2(500 BYTE),
+  secorpt VARCHAR2(1 BYTE),
+  secorpt1 VARCHAR2(500 BYTE),
+  secorpt2 VARCHAR2(500 BYTE),
+  casorpt1 VARCHAR2(1 BYTE),
+  casorpt2 VARCHAR2(1 BYTE),
+  casorpt3 VARCHAR2(1 BYTE),
+  autrpt1 VARCHAR2(1 BYTE),
+  autrpt2 VARCHAR2(1 BYTE),
+  servrpt1 VARCHAR2(1 BYTE),
+  sugerencias VARCHAR2(1000 BYTE),
+  quejas VARCHAR2(1000 BYTE),
+  codses NUMBER(38) NOT NULL,
+  codasig NUMBER,
+  PRIMARY KEY (cod_fpart),
+  CONSTRAINT asig_fparticipante_codasig FOREIGN KEY (codasig) REFERENCES came.asignacion (codasig),
+  CONSTRAINT fparticipante_sesion FOREIGN KEY (codses) REFERENCES came.sesion (codses)
+);

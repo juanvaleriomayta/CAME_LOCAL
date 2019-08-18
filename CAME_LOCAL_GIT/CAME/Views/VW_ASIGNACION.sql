@@ -1,0 +1,2 @@
+CREATE OR REPLACE FORCE VIEW came.vw_asignacion (coddetprog,estdetprog,codprog,estprog,programa) AS
+select prog_det.coddetprog,prog_det.estdetprog,PROGRAMA.CODPROG,PROGRAMA.ESTPROG ,CONCAT(CONCAT(PROGRAMA.NOMPROG,' - Gen : '),prog_det.GENDETPROG)As Programa from prog_det inner join PROGRAMA on programa.codprog = prog_det.CODPROG;

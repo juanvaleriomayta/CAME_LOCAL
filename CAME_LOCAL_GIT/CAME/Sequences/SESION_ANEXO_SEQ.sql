@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.sesion_anexo_seq CACHE 2 ORDER;

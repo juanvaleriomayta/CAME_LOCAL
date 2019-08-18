@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.f_imp_parc_ses_seq CACHE 2 ORDER;

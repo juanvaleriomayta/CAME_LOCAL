@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.sesion_seq CACHE 2 ORDER;

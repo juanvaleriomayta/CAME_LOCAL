@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.tipoprog_seq CACHE 2 ORDER;

@@ -1,0 +1,9 @@
+CREATE OR REPLACE FORCE VIEW came.vw_nombre_programa (codprog,gendetprog,coddetprog,estdetprog,estprog,codper,programa) AS
+SELECT PROGRAMA.CODPROG,PROG_DET.GENDETPROG,
+ PROG_DET.CODDETPROG,
+ PROG_DET.ESTDETPROG,
+ PROGRAMA.ESTPROG,
+ prog_det.codper,
+ 
+PROGRAMA.NOMPROG AS PROGRAMA 
+ FROM PROG_DET INNER JOIN PROGRAMA ON programa.codprog = PROG_DET.CODPROG;

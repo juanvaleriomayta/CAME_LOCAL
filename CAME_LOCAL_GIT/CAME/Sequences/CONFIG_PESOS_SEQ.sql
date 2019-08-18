@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.config_pesos_seq CACHE 2 ORDER;

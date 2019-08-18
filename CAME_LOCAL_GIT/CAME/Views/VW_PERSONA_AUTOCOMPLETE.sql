@@ -1,0 +1,2 @@
+CREATE OR REPLACE FORCE VIEW came.vw_persona_autocomplete (codper,nomper,apeper,nombre) AS
+Select CODPER, UPPER(NOMPER) AS NOMPER, UPPER(APEPER) AS APEPER, UPPER(NOMPER || ' ' || APEPER) AS NOMBRE from PERSONA;

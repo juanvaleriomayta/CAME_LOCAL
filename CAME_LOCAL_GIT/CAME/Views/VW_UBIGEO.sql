@@ -1,0 +1,5 @@
+CREATE OR REPLACE FORCE VIEW came.vw_ubigeo (codubi,ubigeo) AS
+SELECT 
+CODUBI,
+(DEPUBI||','||PROVUBI||','||DISTUBI) AS UBIGEO
+FROM UBIGEO;

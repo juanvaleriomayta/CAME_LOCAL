@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.empresa_seq CACHE 2 ORDER;

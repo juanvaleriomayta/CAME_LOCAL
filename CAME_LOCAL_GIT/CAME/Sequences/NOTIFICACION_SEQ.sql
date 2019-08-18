@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.notificacion_seq;

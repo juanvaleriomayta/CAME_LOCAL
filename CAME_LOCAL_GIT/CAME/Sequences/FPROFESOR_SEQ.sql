@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.fprofesor_seq CACHE 2 ORDER;

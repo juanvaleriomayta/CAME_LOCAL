@@ -1,0 +1,15 @@
+CREATE OR REPLACE FORCE VIEW came.vw_rfpar_se (codses,item,op,opcion,resultado) AS
+SELECT 
+CODSES,
+'Sesión en conjunto' AS ITEM,
+SECORPT as OP,
+CASE 
+WHEN SECORPT = '1' THEN 'Mal'
+WHEN SECORPT = '2' THEN 'Regular'
+WHEN SECORPT = '3' THEN 'Bien'
+WHEN SECORPT = '4' THEN 'Muy bien'
+WHEN SECORPT = '5' THEN 'Excelente'
+END AS OPCION,
+COUNT(SECORPT) AS RESULTADO
+FROM FPARTICIPANTE
+GROUP BY SECORPT, 'Sesión en conjunto', CODSES ORDER BY ITEM,OP;

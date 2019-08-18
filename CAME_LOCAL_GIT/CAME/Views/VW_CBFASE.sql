@@ -1,0 +1,2 @@
+CREATE OR REPLACE FORCE VIEW came.vw_cbfase (nomfase,codfase,estfase,coddetprog,gendetprog) AS
+select fase.nomfase,fase.codfase,fase.ESTFASE,prog_det.coddetprog,PROG_DET.GENDETPROG from fase inner JOIN prog_det ON prog_det.coddetprog = fase.CODDETPROG;

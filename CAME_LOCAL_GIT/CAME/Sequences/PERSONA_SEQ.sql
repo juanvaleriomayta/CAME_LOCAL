@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.persona_seq CACHE 2 ORDER;

@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.fase_seq CACHE 2 ORDER;

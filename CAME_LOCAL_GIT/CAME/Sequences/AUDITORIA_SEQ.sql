@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.auditoria_seq CACHE 2 ORDER;

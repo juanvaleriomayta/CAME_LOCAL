@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.asigcoach_seq CACHE 2 ORDER;

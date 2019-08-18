@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.programa_seq CACHE 2 ORDER;

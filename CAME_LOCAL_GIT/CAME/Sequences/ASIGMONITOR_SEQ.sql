@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.asigmonitor_seq CACHE 2 ORDER;

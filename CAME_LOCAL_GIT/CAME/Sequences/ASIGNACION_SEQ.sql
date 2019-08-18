@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.asignacion_seq CACHE 2 ORDER;

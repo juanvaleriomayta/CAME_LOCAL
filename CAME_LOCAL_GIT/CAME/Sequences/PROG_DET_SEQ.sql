@@ -1,0 +1,1 @@
+CREATE SEQUENCE came.prog_det_seq CACHE 2 ORDER;
